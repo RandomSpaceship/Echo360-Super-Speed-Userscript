@@ -22,7 +22,8 @@
 // NOTE: Add (or remove) speeds to this array to your liking.
 // Note that there is a browser set limit of 16x, and speeds above 4x are muted.
 // https://searchfox.org/mozilla-central/rev/f1c881ba5603410dacbe52874053af38bd825c3b/dom/html/HTMLMediascript_Element.cpp#179-183
-const selected_speeds = [4, 3, 2, 1.75, 1.5, 1.25, 1, 0.75];
+const selected_speeds = Array.from({ length: 16 }, (_, i) => (i + 1) / 4).reverse();
+// const selected_speeds = [4, 3, 2, 1.75, 1.5, 1.25, 1, 0.75];
 // const selected_speeds = [2, 1.75, 1.5, 1.25, 1, 0.75, 0.5, 0.25]; // Default Echo360 speeds.
 
 // NOTE: Change this to modify how much the speed changes when you use the < or
